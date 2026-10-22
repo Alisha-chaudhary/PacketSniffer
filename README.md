@@ -1,4 +1,4 @@
-# PacketLens 📡
+# PacketSniffer 📡
 
 ## Authorised Network Packet Capture & Analysis
 
@@ -9,13 +9,13 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-success)](https://github.com/Alisha-chaudhary/PacketLens)
 
-PacketLens is a lightweight, educational network-sniffing tool built in Python with **Scapy** (Npcap on Windows). It captures authorised traffic, decodes packet structure across the link, network, transport, and application layers, and logs metadata to CSV for defensive analysis and troubleshooting.
+PacketSniffer is a lightweight, educational network-sniffing tool built in Python with **Scapy** (Npcap on Windows). It captures authorised traffic, decodes packet structure across the link, network, transport, and application layers, and logs metadata to CSV for defensive analysis and troubleshooting.
 
-> **Engineering goal:** learn how packets move through a network — Ethernet → IPv4/IPv6 → TCP/UDP/ICMP → DNS — and understand what metadata is visible (and what stays hidden, such as encrypted HTTPS payloads).
+> **Engineering goal:** learn how packets move through a network - Ethernet → IPv4/IPv6 → TCP/UDP/ICMP → DNS — and understand what metadata is visible (and what stays hidden, such as encrypted HTTPS payloads).
 
 ---
 
-## 🛡️ What PacketLens Does
+## 🛡️ What PacketSniffer Does
 
 | Phase | Capability |
 |-------|------------|
@@ -33,8 +33,8 @@ PacketLens is a lightweight, educational network-sniffing tool built in Python w
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/Alisha-chaudhary/PacketLens.git
-cd PacketLens
+git clone https://github.com/Alisha-chaudhary/PacketSniffer.git
+cd PacketSniffer
 
 python -m venv .venv
 .venv\Scripts\activate
@@ -69,7 +69,7 @@ Press **Ctrl+C** at any time to stop gracefully and view the traffic summary.
 ## 🧩 Project Structure
 
 ```
-PacketLens/
+PacketSniffers/
 ├── .github/workflows/          # CI workflow (runs tests)
 ├── screenshots/                # Demo screenshots (add your own)
 ├── samples/                    # Sanitised sample capture output
@@ -112,7 +112,7 @@ Scapy sniff()  ──►  capture.py  ──►  parser.py
    Console (live packet details)
 ```
 
-Scapy parses whichever layers are present in each packet. PacketLens does **not** assume every packet contains every layer, and does **not** assume the payload is readable. Encrypted traffic, capture filters, interface choice, and packet truncation all affect what is observed.
+Scapy parses whichever layers are present in each packet. PacketSniffer does **not** assume every packet contains every layer, and does **not** assume the payload is readable. Encrypted traffic, capture filters, interface choice, and packet truncation all affect what is observed.
 
 ---
 
@@ -160,7 +160,7 @@ Console view:
 
 ## ⚖️ Authorised Testing Only
 
-PacketLens is intended for **authorised security testing, network troubleshooting, and educational use**.
+PacketSniffer is intended for **authorised security testing, network troubleshooting, and educational use**.
 
 - Only capture traffic on networks you own or have explicit written permission to monitor.
 - Do not capture credentials, personal data, or third-party traffic without authorisation.
